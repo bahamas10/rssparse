@@ -29,6 +29,10 @@
 
 import sys
 import urllib2
+try:
+	import json
+except ImportError:
+	import simplejson as json
 
 import rss
 
@@ -37,4 +41,4 @@ try:
 except IndexError:
 	url = 'http://www.daveeddy.com/feed'
 
-print rss.parse(urllib2.urlopen(url).read())
+print json.dumps(rss.parse(urllib2.urlopen(url).read()), indent=4)
