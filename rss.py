@@ -56,3 +56,19 @@ def parse(rss, fields = ['pubDate', 'title', 'link', 'description']):
 
 	# Return the object
 	return { 'title' : title, 'description' : description, 'items' : items }
+
+if __name__ == '__main__':
+	import sys
+	import urllib2
+	try:
+		import json
+	except ImportError:
+		import simplejson as json
+
+	try:
+		url = sys.argv[1]
+	except IndexError:
+		url = 'http://www.daveeddy.com/feed'
+
+	obj = parse(urllib2.urlopen(url).read())
+	print json.dumps(obj, indent=4)
