@@ -2,6 +2,8 @@ RSS Parse
 ============
 Parse RSS in python and return a python native object
 
+Usage
+=====
 Example Usage:
 
 	>>> import urllib2
