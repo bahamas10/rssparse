@@ -7,7 +7,9 @@ Example Usage:
 	>>> import urllib2
 	>>> import rss
 	>>> print rss.parse(urllib2.urlopen('http://someurl/rss.xml').read())
-	{ put example here }
+	{ 'title' : 'Title of RSS', 'description' : 'Description of RSS', items : [ {}, {}, ... ] }
+
+	$ ./test.py http://www.daveeddy.com/feed
 
 Copying
 =======
