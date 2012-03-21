@@ -9,6 +9,8 @@ Example Usage:
 	>>> print rss.parse(urllib2.urlopen('http://someurl/rss.xml').read())
 	{ 'title' : 'Title of RSS', 'description' : 'Description of RSS', items : [ {}, {}, ... ] }
 
+Using the test script:
+
 	$ ./test.py http://www.daveeddy.com/feed
 
 Copying
