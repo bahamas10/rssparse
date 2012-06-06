@@ -6,10 +6,12 @@ Usage
 =====
 Example Usage:
 
-	>>> import urllib2
-	>>> import rss
-	>>> print rss.parse(urllib2.urlopen('http://someurl/rss.xml').read())
-	{ 'title' : 'Title of RSS', 'description' : 'Description of RSS', items : [ {}, {}, ... ] }
+``` python
+>>> import urllib2
+>>> import rss
+>>> print rss.parse(urllib2.urlopen('http://someurl/rss.xml').read())
+{ 'title' : 'Title of RSS', 'description' : 'Description of RSS', items : [ {}, {}, ... ] }
+```
 
 Command line:
 
